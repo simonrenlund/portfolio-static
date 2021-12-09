@@ -1,0 +1,134 @@
+/* 
+General CSS 
+*/
+html {
+    font-size: 16px;
+}
+@media (min-width: 1500px) {
+    html {
+        font-size: 24px;
+    }
+}
+body {
+    box-sizing: border-box;
+    background-color: #20201f;
+    margin:0;
+}
+:root {
+    --color-primary: #f9c6ff;
+    --color-accent: #cc6666;
+}
+.wrapper {
+    margin: 1em;
+}
+/* 
+Layout 
+*/
+.content {
+    margin: 0 10vw;
+}
+@media (max-width: 768px) {
+    .content {
+        margin: 0;
+    }
+}
+.grid {
+    display: grid;
+}
+.grid--nav {
+    display: grid;
+    grid-template-columns: 3fr repeat(4, 1.25fr) 0.25fr;
+    height: 1.5rem;
+    width: 100vw;   
+}
+.flex--content {
+    display: flex;
+}
+.subtitle {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.card > h1 {
+    margin-bottom: 0;
+}
+/* 
+Type 
+*/
+h1, h2, h3, nav {
+    font-family: 'Gothic A1', sans-serif;
+}
+p {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1rem;
+}
+nav {
+    text-align: center;
+    font-size: 1.25rem; 
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+/* 
+Colors 
+*/
+.card > h1,h2,h3 {
+    color: var(--color-accent);
+}
+.card > p {
+    color: var(--color-primary);
+}
+nav {
+    color: var(--color-primary);
+}
+@media(max-width: 768px) {
+    .grid--nav {
+        display: none;
+    }
+}
+/* 
+Ornaments 
+*/
+.card {
+    padding: 1em;
+    margin: 2em 0;
+    box-shadow: 0.25em 0 1em black;
+}
+.hero {
+    box-shadow: 0 0 0;
+    height: calc(100vmin - 1.5em - 4em);
+    margin-bottom: 0;
+    text-align: center;
+}
+.hero > h1 {
+    font-size: 3em;
+}
+@media (max-width: 768px) {
+    .hero > h1 {
+        font-size: 2rem;
+    }
+    .hero {
+        height: calc(100vh - 1.5em - 4em);
+    }
+}
+.hero-picture {
+    height: 70vmin;
+}
+.nav-item {
+    padding-top: 1em;
+    padding-bottom: 2px;
+    background-image: linear-gradient(var(--color-primary),var(--color-primary));
+    background-position: left bottom;
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s;
+}
+.nav-item:hover {
+    background-size: 100% 2px;
+}
+
