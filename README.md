@@ -1,0 +1,1 @@
+This is the repository for the portfolio website of my portfolio website. The website is totally static using html and css.
